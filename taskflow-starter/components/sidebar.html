@@ -1,0 +1,51 @@
+<aside class="sidebar" aria-label="Main navigation">
+
+  <div class="sidebar-add-wrap">
+    <button type="button" class="sidebar-add-button" id="open-task-form" aria-expanded="false"
+      aria-controls="task-modal-overlay">
+      <span aria-hidden="true">+</span> Add Task
+    </button>
+  </div>
+
+  <p class="nav-label">WORKSPACE</p>
+
+  <nav class="side-nav">
+
+    <button class="nav-item active" data-view="tasks">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="5" width="16" height="15" rx="3" />
+        <path d="M8 3v4m8-4v4M4 10h16" />
+      </svg>
+      <span>My Tasks</span><span class="nav-count" id="pending-count">0</span>
+    </button>
+
+    <button class="nav-item" data-view="unscheduled">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3v18m9-9H3" />
+        <circle cx="12" cy="12" r="9" />
+      </svg>
+      <span>Unscheduled</span><span class="nav-count" id="unscheduled-count">0</span>
+    </button>
+
+    <button class="nav-item" data-view="completed">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" />
+        <path d="m8 12 2.5 2.5L16.5 9" />
+      </svg>
+      <span>Completed</span><span class="nav-count" id="completed-count">0</span>
+    </button>
+
+  </nav>
+
+  <div class="sidebar-bottom">
+
+    <!-- <div class="focus-card">
+      <span class="focus-icon">✦</span>
+      <p class="focus-title">Small steps add up.</p>
+      <p class="focus-copy">Keep showing up. Progress follows.</p>
+    </div> -->
+
+    <p class="sidebar-footnote">A little more focused, every day.</p>
+
+  </div>
+</aside>

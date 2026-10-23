@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <title>TaskFlow — Plan your day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css?v=3">
+</head>
+
+<body data-theme="day">
+  <div class="app-shell">
+    <div id="header-component"></div>
+    <div class="app-layout">
+      <div id="sidebar-component"></div>
+      <main class="main-content">
+        <div id="dashboard-component"></div>
+        <div id="unschedule-component"></div>
+        <div id="completed-component"></div>
+        <footer class="app-footer"><span>Made for a clearer mind.</span>
+        </footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+  <div class="task-modal-overlay" id="task-modal-overlay" hidden>
+    <section class="task-modal" role="dialog" aria-modal="true" aria-labelledby="task-modal-title"
+      aria-describedby="task-modal-description">
+      <div class="task-modal-header">
+        <div class="task-modal-heading">
+          <span class="task-modal-icon" aria-hidden="true">+</span>
+          <div>
+            <p class="task-modal-eyebrow">TASKFLOW</p>
+            <h2 id="task-modal-title">Add a task</h2>
+          </div>
+        </div>
+        <button type="button" class="task-modal-close" id="close-task-form" aria-label="Close task form">×</button>
+      </div>
+      <p class="task-modal-description" id="task-modal-description">Capture what needs to get done and choose when.</p>
+      <form id="task-form" class="task-modal-form">
+        <div class="task-modal-field">
+          <label for="task-title">Task Title <span>Required</span></label>
+          <input id="task-title" name="title" type="text" maxlength="120" placeholder="What needs to get done?"
+            autocomplete="off" required>
+        </div>
+        <div class="task-modal-field">
+          <label for="task-description">Task Description <span>Optional</span></label>
+          <textarea id="task-description" maxlength="500" placeholder="Add a little more detail..." rows="4"></textarea>
+        </div>
+        <div class="task-modal-field task-date-field">
+          <label for="task-date">Assign to Date</label>
+          <div class="task-date-controls">
+            <input id="task-date" type="date" aria-label="Assign task to a date">
+            <button type="button" class="task-unassigned-button" id="clear-date" aria-pressed="false">Unassigned</button>
+          </div>
+        </div>
+        <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        <div class="task-modal-actions">
+          <button type="button" class="task-modal-cancel" id="cancel-task-form">Cancel</button>
+          <button class="task-modal-submit" id="task-form-submit" type="submit">Add Task</button>
+        </div>
+      </form>
+    </section>
+  </div>
+  <script type="module" src="js/app.js?v=3"></script>
+</body>
+
+</html>

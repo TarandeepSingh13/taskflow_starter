@@ -1,0 +1,48 @@
+<section class="view-panel" id="tasks-view">
+
+  <div class="welcome-row" style="margin-bottom: 0;">
+    <div>
+      <p class="eyebrow" id="date-eyebrow">YOUR DAILY SPACE</p>
+      <h1 id="greeting-title">Make today count<span class="heading-period">.</span></h1>
+      <p class="page-subtitle">One thing at a time. You've got this.</p>
+    </div>
+    <div class="today-summary"><span class="summary-dot"></span><span id="summary-text">Ready when you are</span></div>
+  </div>
+
+  <section class="week-card compact-week-card" aria-label="Weekly tasks">
+
+    <div class="compact-week-header">
+      <span class="week-date-range" id="week-date-range" aria-live="polite"></span>
+      <div class="week-calendar-wrap">
+        <button type="button" class="week-calendar-button" id="week-calendar-button" aria-label="Choose a week"
+          title="Choose a week" aria-expanded="false" aria-controls="week-calendar-popover">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.5" y="5" width="17" height="16" rx="2.5"></rect>
+            <path d="M7.5 3v4M16.5 3v4M3.5 10h17"></path>
+            <path d="M7.5 13h.01M12 13h.01M16.5 13h.01M7.5 17h.01M12 17h.01"></path>
+          </svg>
+        </button>
+        <div class="week-calendar-popover" id="week-calendar-popover" hidden>
+          <div class="calendar-week-navigation">
+            <button type="button" class="week-nav-arrow" id="prev-week" aria-label="Previous week"
+              title="Previous week">&#8249;</button>
+            <strong id="calendar-week-label"></strong>
+            <button type="button" class="week-nav-arrow" id="next-week" aria-label="Next week"
+              title="Next week">&#8250;</button>
+          </div>
+          <label for="week-date-picker">Choose any date in the week</label>
+          <input type="date" id="week-date-picker">
+          <div class="calendar-popover-actions">
+            <button type="button" class="text-button" id="cancel-week">Cancel</button>
+            <button type="button" class="small-primary" id="apply-week">Apply</button>
+          </div>
+        </div>
+      </div>
+      <div class="task-stats"><span id="pending-summary">0 pending</span><span class="stat-divider">·</span><span
+          id="done-summary">0 completed</span></div>
+    </div>
+
+    <div class="week-strip" id="week-strip" role="group" aria-label="Tasks by day, Sunday through Saturday"></div>
+  </section>
+  
+</section>
